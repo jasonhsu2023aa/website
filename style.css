@@ -1,0 +1,174 @@
+/* Minecraft 風格的字體和全局設置 */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 標題樣式 */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    border-bottom: 4px solid #4a4a4a;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #55ff55;
+    text-shadow: 2px 2px #000000;
+    margin-bottom: 20px;
+}
+
+/* 導航欄樣式 */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border: 2px solid #55ff55;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #55ff55;
+    color: #000000;
+}
+
+/* 主要內容區域 */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 4px solid #4a4a4a;
+}
+
+#home {
+    background-image: url('./minecraft-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#home h2, #home p {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #000000;
+}
+
+#home p {
+    font-size: 1.8em;
+}
+
+/* 畫廊樣式 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    height: 200px;
+    background-color: #4a4a4a;
+    border: 2px solid #55ff55;
+}
+
+/* 表單樣式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #55ff55;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 2px solid #55ff55;
+    color: #ffffff;
+    font-family: 'VT323', monospace;
+}
+
+button {
+    background-color: #55ff55;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #44cc44;
+}
+
+/* 頁尾樣式 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-top: 4px solid #4a4a4a;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin-bottom: 10px;
+    }
+} 

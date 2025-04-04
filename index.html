@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日月潭導覽</title>
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="site-title">日月潭導覽</h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="nav-link">首頁</a></li>
+                        <li><a href="#" class="nav-link">景點介紹</a></li>
+                        <li><a href="#" class="nav-link">美食推薦</a></li>
+                        <li><a href="#" class="nav-link">交通資訊</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="articles-list">
+                <!-- 第一篇文章 -->
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-date">
+                            <i class="fas fa-calendar-alt"></i> 2024-04-04
+                        </span>
+                        <span class="article-tags">
+                            <i class="fas fa-tag"></i> 景點介紹
+                        </span>
+                    </div>
+                    <h2 class="article-title">日月潭風景區導覽</h2>
+                    <p class="article-excerpt">日月潭是台灣最大的淡水湖泊，也是最美麗的高山湖泊之一。這裡不只有優美的自然景觀，更蘊含豐富的原住民文化...</p>
+                    <div class="article-full-content" style="display: none;">
+                        <p>日月潭位於南投縣魚池鄉，是台灣最大的天然湖泊。湖泊周圍群山環繞，風景優美，水域遼闊，南形如月弧，北形如日輪，因而得名「日月潭」。</p>
+                        <h3>必訪景點：</h3>
+                        <ul>
+                            <li>文武廟：位於日月潭北邊，是環湖必訪的景點之一，廟宇建築雄偉壯觀。</li>
+                            <li>伊達邵碼頭：原住民特色商圈，可以品嚐邵族美食與購買特產。</li>
+                            <li>向山遊客中心：現代化建築，提供完整的旅遊資訊服務。</li>
+                            <li>日月潭纜車：可以搭乘纜車飽覽日月潭全景。</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">繼續閱讀 <i class="fas fa-arrow-right"></i></button>
+                </article>
+
+                <!-- 第二篇文章 -->
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-date">
+                            <i class="fas fa-calendar-alt"></i> 2024-04-03
+                        </span>
+                        <span class="article-tags">
+                            <i class="fas fa-tag"></i> 美食推薦
+                        </span>
+                    </div>
+                    <h2 class="article-title">日月潭特色美食攻略</h2>
+                    <p class="article-excerpt">探索日月潭在地特色美食，從原住民風味餐到創新料理，帶您品嚐最道地的日月潭美食...</p>
+                    <div class="article-full-content" style="display: none;">
+                        <p>日月潭不只有美麗的風景，更有豐富多樣的美食等待您的探索。從傳統的邵族美食到現代創新料理，這裡提供了多元的餐飲選擇。</p>
+                        <h3>必吃美食：</h3>
+                        <ul>
+                            <li>總統魚：日月潭特有的魚種，肉質鮮美。</li>
+                            <li>邵族風味餐：體驗原住民特色料理。</li>
+                            <li>日月潭紅茶：知名特產，香氣醇厚。</li>
+                            <li>阿薩姆鬆餅：使用在地紅茶製作的特色甜點。</li>
+                        </ul>
+                    </div>
+                    <button class="read-more-btn">繼續閱讀 <i class="fas fa-arrow-right"></i></button>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 日月潭導覽網. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 放在 body 結束標籤前 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 獲取所有「繼續閱讀」按鈕
+            const readMoreButtons = document.querySelectorAll('.read-more-btn');
+            
+            // 為每個按鈕添加點擊事件
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 獲取當前文章卡片
+                    const article = this.closest('.article-card');
+                    // 獲取完整內容區域
+                    const fullContent = article.querySelector('.article-full-content');
+                    
+                    // 切換顯示/隱藏
+                    if (fullContent.style.display === 'none') {
+                        fullContent.style.display = 'block';
+                        this.innerHTML = '收起內容 <i class="fas fa-arrow-up"></i>';
+                    } else {
+                        fullContent.style.display = 'none';
+                        this.innerHTML = '繼續閱讀 <i class="fas fa-arrow-right"></i>';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
